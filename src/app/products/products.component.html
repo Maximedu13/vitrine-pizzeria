@@ -1,0 +1,46 @@
+<main>
+<!--
+<div class="content" role="main">
+
+
+  <div class="card highlight-card card-small">
+
+
+    
+
+  </div>
+
+  
+
+<br/>
+
+
+<!-- Terminal 
+</div>
+-->
+<div class="card-deck">
+<div class="row">
+<div class="col-6" *ngFor='let pizza of pizzas'>
+  <div class="card">
+    <img class="card-img-top" src="{{pizza.picture}}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{pizza.name}}<span>{{pizza.price}}$</span></h5>
+      <p class="card-text">{{pizza.ingredients}}</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      <select (change)="selected($event.target.value, pizza.name)">
+        <option value='-Combien en voulez-vous?-' disabled>-Combien en voulez-vous?-</option>
+        <option *ngFor='let key of [1,2,3, 4, 5, 6, 7, 8, 9, 10]' value="{{key}}">{{key}}</option>
+      </select>
+      <a (click)="onSave(pizza.name)"><img src="https://www.flaticon.com/svg/static/icons/svg/891/891407.svg"></a>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<!--
+<div class="terminal">
+    <pre>ng generate component xyz</pre>
+</div>
+-->
+</main>

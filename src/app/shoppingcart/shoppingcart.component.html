@@ -1,0 +1,14 @@
+<div class="cart">
+<h2 class="order">Panier</h2>
+<h2 class="total">Total
+<ul>
+    <li *ngFor="let recipient of list_cart | keyvalue">
+        {{recipient.key}} --> {{recipient.value}}
+    </li>
+</ul>
+
+0,00€</h2>
+<br/><br/><br/>
+<button mat-button>✔</button>
+
+</div>
